@@ -1,0 +1,28 @@
+.post {
+    border: 1px solid #212041;
+    width: 30%;
+    padding: 30px;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+.post:hover {
+    box-shadow: 0 0 15px #212041;
+}
+
+.ime {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.status { 
+    color: gray;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.slika {
+    width: 90%;
+}
