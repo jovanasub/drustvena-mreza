@@ -10,9 +10,11 @@ function App() {
   const [profil, setProfil] = useState(profilPodaci);
 
   const izmenaProfile = (prop, vrednost) => {
-    setProfil({
-      ...profil,
-      [prop]: vrednost,
+    setProfil(prev => {
+      return {
+        ...prev,
+        [prop]: vrednost,
+      }
     });
   };
 
@@ -20,11 +22,11 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/">
-          <HomeStrana />
-        </Route>
         <Route path="/profil">
           <Profil izmenaProfile={izmenaProfile} profil={profil} />
+        </Route>
+        <Route path="/">
+          <HomeStrana />
         </Route>
       </Switch>
     </Router>
